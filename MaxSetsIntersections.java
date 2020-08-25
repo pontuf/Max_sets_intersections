@@ -7,12 +7,11 @@ class Main{
 	public static String inpu(){
 		int a = ThreadLocalRandom.current().nextInt(0, 50);
 		int b = ThreadLocalRandom.current().nextInt(0, 50);
-		int c = 0;
 
 	    if (a > b){
-	    	c = a; 
-	    	a = b;
-	    	b = c;
+		a += b;
+	    	b = a - b;
+	    	a -= b;
 	    }	   
 	    else if (a == b)
 	        b += 1;
